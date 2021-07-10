@@ -59,4 +59,14 @@ public class Bank {
         }
         return false;
     }
+
+    public void displayAccounts(){
+        int index=1;
+        for (BankAccount acc: accountList) {
+            System.out.println(index+". accounts: ");
+            System.out.println(acc.toString());
+            index++;
+            System.out.println();
+        }
+    }
 }

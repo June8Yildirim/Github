@@ -50,4 +50,5 @@ public class BankAccounts {
     public void addInterest(){
         balance += (balance*interestedRate)/100;
     }
+
 }

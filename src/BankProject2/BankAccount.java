@@ -1,16 +1,15 @@
 package BankProject2;
 
 
-
 public class BankAccount {
     private String accountName;
     private String accountNumber;
-    private double balance;
+    protected double balance;
     private double interestRate;
 
-    public BankAccount(String nameAccount, String numberAccount){
-        this.accountName=nameAccount;
-        this.accountNumber=numberAccount;
+    public BankAccount(String nameAccount, String numberAccount) {
+        this.accountName = nameAccount;
+        this.accountNumber = numberAccount;
     }
 
     public String getAccountName() {
@@ -33,17 +32,23 @@ public class BankAccount {
     public void setInterestRate(double interestRate) {
         this.interestRate = interestRate;
     }
-    public boolean withdraw(double money){
-        if (money<balance){
-            this.balance -=money;
+
+
+    public boolean withdraw(double money) {
+        if (money < balance) {
+            this.balance -= money;
             return true;
-        }else{
-            System.out.println("Balance problem");
+        } else {
+            System.out.println("Insufficient account");
             return false;
         }
     }
 
-    public void deposit(double money){
+    public void deposit(double money) {
         this.balance += money;
+    }
+
+    public String toString() {
+        return "Account Name: " + getAccountName() + "\nAccount Number: " + getAccountNumber() + "\nAccount Balance: " + getBalance();
     }
 }

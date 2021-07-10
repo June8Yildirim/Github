@@ -13,6 +13,9 @@ public class Sensor {
         }catch (Exception e){}
     }
 
+    public Sensor() {
+
+    }
 
 
     public double getPressure() {
