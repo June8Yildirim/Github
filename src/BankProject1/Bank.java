@@ -30,15 +30,15 @@ public class Bank {
         }
     }
 
-    public boolean addAccount(String Accountname, String AccountNumber){
-        if (search(AccountNumber)== -999){
-            bank.add(new BankAccounts(Accountname,AccountNumber));
+    public boolean addAccount(String accountName, String accountNumber){
+        if (search(accountNumber)== -999){
+            bank.add(new BankAccounts(accountName,accountNumber));
             return true;
         }
         return false;
     }
-    public boolean removeAccount(String AccountNumber){
-        int index = search(AccountNumber);
+    public boolean removeAccount(String accountNumber){
+        int index = search(accountNumber);
         if (index != -999){
             bank.remove(index);
             return true;
