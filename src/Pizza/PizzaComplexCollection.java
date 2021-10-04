@@ -32,6 +32,7 @@ public class PizzaComplexCollection {
                 String[] ingredients = sc.nextLine().split(separator);
                 list[index]= new PizzaComplex(name, price, ingredients);
             }
+
             sc.close();
         }
     }

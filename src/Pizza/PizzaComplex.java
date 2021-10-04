@@ -46,4 +46,13 @@ public class PizzaComplex extends Pizza implements PizzaComplexInt {
         return builder.toString();
     }
 
+    public void pizzaTest(PizzaInt p){
+        System.out.println("Name of the pizza: "+p.getName());
+        System.out.println("Price of the pizza: "+p.getPrice());
+        if (p instanceof PizzaComplex){
+            String[] in  = ((PizzaComplex) p ).getIngredients();
+        }
+
+    }
+
 }
